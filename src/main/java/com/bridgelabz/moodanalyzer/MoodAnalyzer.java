@@ -10,20 +10,30 @@ public class MoodAnalyzer {
 
     }
 
-    public String analyseMood(){
+    public String analyseMood() {
 
-        if (message.contains("sad")){
+        try {
 
-            return "SAD";
+            if (message.contains("sad")) {
+
+                return "SAD";
+
+            } else {
+
+                return "HAPPY";
+
+            }
+        }
+        catch (NullPointerException e){
+
+            System.out.println("catch block executed");
 
         }
-        else {
 
-            return "HAPPY";
-
-        }
+        return "Exception got Handeled";
 
     }
+
 
 
 }
