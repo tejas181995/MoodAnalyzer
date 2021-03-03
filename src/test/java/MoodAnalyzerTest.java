@@ -10,20 +10,12 @@ public class MoodAnalyzerTest {
     @Test
     public void testSadMood(){
 
-        mood = new MoodAnalyzer("I am in sad mood");
+        mood = new MoodAnalyzer(null);
 
         System.out.println(mood.analyseMood());
 
     }
 
-    @Test
-    public void testHappyMood(){
-
-        mood = new MoodAnalyzer("I am in Happy mood");
-
-        System.out.println(mood.analyseMood());
-
-    }
 
 }
 

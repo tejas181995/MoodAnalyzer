@@ -26,14 +26,12 @@ public class MoodAnalyzer {
         }
         catch (NullPointerException e){
 
-            System.out.println("catch block executed");
+            System.out.println(e);
 
         }
 
-        return "Exception got Handeled";
+        return "Happy";
 
     }
-
-
 
 }
