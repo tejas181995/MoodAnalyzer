@@ -4,6 +4,7 @@ public class MoodAnalyzer {
 
     public String message;
 
+
     public MoodAnalyzer(String message){
 
         this.message = message;
@@ -14,23 +15,19 @@ public class MoodAnalyzer {
 
         try {
 
-            if (message.contains("sad")) {
+            if(message == null)
+                throw new MoodAnalyzeException("NULL");
+            if(message.equals(""))
+                throw new MoodAnalyzeException("Empty");
 
-                return "SAD";
-
-            } else {
-
-                return "HAPPY";
-
-            }
+            return message.contains("sad") ? "SAD" : "HAPPY";
         }
-        catch (NullPointerException e){
+        catch (MoodAnalyzeException e){
 
-            System.out.println(e);
-
+            System.out.println(e.getMessage());
+            return "Exception Caught !!";
         }
 
-        return "Happy";
 
     }
 
