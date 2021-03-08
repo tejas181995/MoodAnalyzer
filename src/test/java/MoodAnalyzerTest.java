@@ -10,7 +10,7 @@ public class MoodAnalyzerTest {
     @Test
     public void testSadMood(){
 
-        mood = new MoodAnalyzer(null);
+        mood = new MoodAnalyzer("EMPTY");
 
         System.out.println(mood.analyseMood());
 
